@@ -3,85 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>История Каира</title>
+    <title>Жизнь Каира</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
+        body {
+            font-family: 'Comfortaa', cursive;
+            background: linear-gradient(to right, #ffe6f0, #e0f7ff);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
         header {
-            background-color: #ffb6c1;
+            background: linear-gradient(135deg, #ff6fa3, #ffb6c1);
             color: white;
-            padding: 20px;
+            padding: 60px 20px;
             text-align: center;
+            animation: slideDown 1s ease-out;
         }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            animation: fadeIn 2.5s ease-in;
+        }
+
         nav {
-            background-color: #ff69b4;
-            padding: 10px;
-            text-align: center;
+            background: #ff69b4;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
+
         nav a {
             color: white;
-            margin: 0 10px;
+            margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.3s;
         }
+
+        nav a:hover {
+            text-decoration: underline;
+            transform: scale(1.1);
+        }
+
         section {
-            padding: 20px;
-            max-width: 800px;
+            padding: 60px 20px;
+            max-width: 1000px;
             margin: auto;
         }
-        footer {
-            background-color: #ffb6c1;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+
+        section:nth-child(even) {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
         }
+
         h2 {
             color: #ff69b4;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #ff6fa3;
+            margin-top: 5px;
+            border-radius: 2px;
+        }
+
+        p, li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: square inside;
+        }
+
+        .profile-pic {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 20px auto;
+            border: 5px solid #ff69b4;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        footer {
+            background: #ff6fa3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes slideDown {
+            from {transform: translateY(-50px); opacity: 0;}
+            to {transform: translateY(0); opacity: 1;}
+        }
+
+        @keyframes float {
+            0%, 100% {transform: translateY(0);}
+            50% {transform: translateY(-15px);}
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Жизнь Каира</h1>
-        <p>История мальчика, который ищет себя и свое место в мире</p>
+        <p>История мальчика, который учится быть смелым и счастливым</p>
     </header>
 
     <nav>
         <a href="#about">О Каире</a>
         <a href="#hobbies">Интересы</a>
         <a href="#story">История</a>
+        <a href="#gallery">Галерея</a>
     </nav>
 
     <section id="about">
         <h2>О Каире</h2>
-        <p>Каир — обычный мальчик гей, который любит рисовать, читать книги и узнавать новое. Он гордится тем, кто он есть, и учится быть смелым в выражении себя.</p>
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?crop=faces&fit=crop&w=250&h=250" alt="Каир" class="profile-pic">
+        <p>Каир — обычный мальчик с необычным сердцем. Он любит творчество, открывает мир для себя и учится принимать себя таким, какой он есть. Его улыбка и доброта делают мир вокруг лучше.</p>
     </section>
 
     <section id="hobbies">
         <h2>Интересы</h2>
         <ul>
-            <li>Рисование и творчество</li>
-            <li>Чтение фантастики и комиксов</li>
-            <li>Играть мегагеем</li>
-            <li>буллинг со стороны друзей и общение в сообществе ЛГБТ+</li>
+            <li>suck dick</li>
+            <li>времяпровождение с парнем</li>
+            <li>Играт в клещ роял</li>
+            <li>Дружба и поддержка ЛГБТ+ сообщества</li>
+            <li>буллинг от 2 отцов</li>
         </ul>
     </section>
 
     <section id="story">
         <h2>История</h2>
-        <p>Каир с раннего детства понимал, что отличается от других, но постепенно учился принимать себя. Его путь полон дружбы, открытий и моментов, когда он учится быть настоящим и смелым.</p>
+        <p>Каир с раннего детства понимал, что он особенный. Порой ему было сложно, но шаг за шагом он учился принимать себя, быть смелым и выражать свои чувства. Его путь — это путь дружбы, радости и маленьких побед каждый день.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Галерея</h2>
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+            <img src="https://images.unsplash.com/photo-1531917761078-1a7d45a8190a?fit=crop&w=300&h=200" alt="Галерея 1" style="border-radius:10px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?fit=crop&w=300&h=200" alt="Галерея 2" style="border-radius:10px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=300&h=200" alt="Галерея 3" style="border-radius:10px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
     </section>
 
     <footer>
-        <p>Создано с любовью от жасура</p>
+        <p>Создано с любовью  от жасура ❤️</p>
     </footer>
 </body>
 </html>
+
